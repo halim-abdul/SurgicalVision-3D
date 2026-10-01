@@ -1,0 +1,15 @@
+task: instrument_anatomy_segmentation
+seed: 11711
+image_size: [256, 256]
+classes: [background, instrument, anatomy_landmark]
+model:
+  name: unet
+  base_channels: 32
+loss:
+  dice_weight: 0.5
+training:
+  batch_size: 8
+  epochs: 60
+  lr: 0.0003
+evaluation:
+  metrics: [mean_iou, mean_dice, per_class_iou, per_class_dice]
