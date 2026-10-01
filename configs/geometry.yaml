@@ -1,0 +1,14 @@
+task: geometry_reconstruction
+pointcloud:
+  min_depth_m: 0.02
+  max_depth_m: 2.0
+  voxel_m: 0.002
+registration:
+  method: paired_svd_baseline
+metrics:
+  - chamfer_distance
+  - hausdorff95
+  - point_to_surface_rmse
+stress_tests:
+  depth_noise_sigma_m: [0.0, 0.001, 0.003, 0.01]
+  mask_erosion_px: [0, 2, 5, 10]
