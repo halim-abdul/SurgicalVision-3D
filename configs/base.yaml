@@ -1,0 +1,11 @@
+seed: 11711
+device: auto
+image_size: [256, 256]
+num_workers: 4
+precision: fp32
+logging:
+  output_dir: runs
+  save_config: true
+research:
+  synthetic_demo_only: true
+  require_uncertainty_report: true

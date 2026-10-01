@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: SurgicalVision-3D
+message: "If this research software helps your work, cite the repository and the relevant underlying datasets/methods."
+type: software
+authors:
+  - family-names: Halim
+    given-names: Abdul
+version: 0.1.0
+license: MIT
+repository-code: https://github.com/halim-abdul/SurgicalVision-3D

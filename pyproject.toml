@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surgicalvision3d"
+version = "0.1.0"
+description = "Research framework for laparoscopic computer vision, spectral imaging and 3D reconstruction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "torch>=2.2", "torchvision>=0.17", "opencv-python>=4.9", "scikit-learn>=1.4", "matplotlib>=3.8", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+geometry = ["open3d>=0.18"]
+notebooks = ["jupyter>=1.0", "ipykernel>=6.29", "pandas>=2.2"]
+dev = ["pytest>=8.0", "ruff>=0.3", "mypy>=1.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
