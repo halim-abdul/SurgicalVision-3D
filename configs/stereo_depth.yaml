@@ -1,0 +1,12 @@
+task: stereo_depth
+calibration:
+  max_epipolar_error_px: 1.0
+stereo:
+  algorithm: sgbm
+  min_disparity: 0
+  num_disparities: 128
+  block_size: 5
+quality:
+  min_valid_depth_fraction: 0.55
+  min_lr_consistency: 0.70
+  max_depth_m: 2.0
