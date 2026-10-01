@@ -1,0 +1,17 @@
+task: hyperspectral_tissue
+seed: 11711
+bands: 31
+classes: [tissue_a, tissue_b, tissue_c, other]
+preprocessing:
+  reflectance_calibration: true
+  standardize: true
+model:
+  name: spectral_spatial_3dcnn
+  channels: 24
+training:
+  epochs: 80
+  batch_size: 16
+  lr: 0.0002
+stress_tests:
+  band_dropout: [0, 2, 5, 10]
+  illumination_scale: [0.6, 0.8, 1.0, 1.2, 1.4]
